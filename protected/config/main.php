@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'TableTop',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -16,6 +16,9 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.components.base.*',
+		'application.components.widgets.*',
+		'application.components.helpers.*',
 	),
 
 	'modules'=>array(
@@ -73,5 +76,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+		'tagline' => 'The Gamer\'s Community',
 	),
 );

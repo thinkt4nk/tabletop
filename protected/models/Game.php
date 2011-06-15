@@ -52,6 +52,8 @@ class Game extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'category' => array(self::BELONGS_TO,'GameCategory','category_id'),
+			'users' => array(self::MANY_MANY,'User','UserGame(game_id,user_id)'),
 		);
 	}
 

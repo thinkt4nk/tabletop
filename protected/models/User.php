@@ -53,6 +53,7 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'games' => array(self::MANY_MANY,'Game','UserGame(user_id,game_id)'),
 		);
 	}
 
