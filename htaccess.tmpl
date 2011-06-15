@@ -1,0 +1,24 @@
+php_value error_reporting 2047
+php_flag short_open_tag off
+php_value post_max_size 16M
+php_value upload_max_filesize 16M
+php_value display_errors On
+php_value memory_limit 128M
+
+
+
+Options +FollowSymLinks
+IndexIgnore */*
+RedirectMatch 404 /\\.svn(/|$)
+
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
